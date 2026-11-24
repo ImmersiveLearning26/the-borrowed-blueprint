@@ -1,0 +1,956 @@
+[
+  {
+    "id": "G01",
+    "speaker": "guide",
+    "text": "Welcome. Enter your name, then your matriculation number.",
+    "trigger": "Enter identity",
+    "origin": "New interface guidance",
+    "file": "assets/audio/G01.mp3",
+    "estimatedSeconds": 3.9
+  },
+  {
+    "id": "N01",
+    "speaker": "narrator",
+    "text": "Abuja. A dispute over the Federation Account has reached the Supreme Court.",
+    "trigger": "Opening briefing 1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/N01.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "N02",
+    "speaker": "narrator",
+    "text": "In seventy-two hours, the Federal Government and the states meet to ask how such disputes should be settled.",
+    "trigger": "Opening briefing 2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/N02.mp3",
+    "estimatedSeconds": 8.2
+  },
+  {
+    "id": "N03",
+    "speaker": "narrator",
+    "text": "Spain is the model on the table. Seventeen regions. Different powers. Different fiscal deals. Yet the conflict has never fully gone away.",
+    "trigger": "Opening briefing 3",
+    "origin": "Source verbatim",
+    "file": "assets/audio/N03.mp3",
+    "estimatedSeconds": 9.9
+  },
+  {
+    "id": "N04",
+    "speaker": "narrator",
+    "text": "You are the analyst. What can Nigeria borrow from Spain, and where does the comparison break?",
+    "trigger": "Opening briefing 4",
+    "origin": "Source verbatim",
+    "file": "assets/audio/N04.mp3",
+    "estimatedSeconds": 7.3
+  },
+  {
+    "id": "S1_EZE",
+    "speaker": "eze",
+    "text": "I need a brief I can defend at the retreat. We will compare Spain with Nigeria, then decide what travels and what does not.",
+    "trigger": "Enter stance",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S1_EZE.mp3",
+    "estimatedSeconds": 10.7
+  },
+  {
+    "id": "S1_QUESTION",
+    "speaker": "guide",
+    "text": "What is your starting position on Spain? Choose the view closest to your own.",
+    "trigger": "Stance question",
+    "origin": "New interface guidance",
+    "file": "assets/audio/S1_QUESTION.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "S1_REPLY_0",
+    "speaker": "eze",
+    "text": "Then show me how. Start with Catalonia.",
+    "trigger": "Opening stance 0",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S1_REPLY_0.mp3",
+    "estimatedSeconds": 3.5
+  },
+  {
+    "id": "S1_REPLY_1",
+    "speaker": "eze",
+    "text": "Then show me where it breaks.",
+    "trigger": "Opening stance 1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S1_REPLY_1.mp3",
+    "estimatedSeconds": 3.1
+  },
+  {
+    "id": "S1_REPLY_2",
+    "speaker": "eze",
+    "text": "Then show me why.",
+    "trigger": "Opening stance 2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S1_REPLY_2.mp3",
+    "estimatedSeconds": 2.2
+  },
+  {
+    "id": "S2_ENTER",
+    "speaker": "guide",
+    "text": "You have twenty-four research hours. Open at least two sources. Each new source costs six hours. Save time if you want to check your recommendations later.",
+    "trigger": "Enter research",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S2_ENTER.mp3",
+    "estimatedSeconds": 11.6
+  },
+  {
+    "id": "S2_FREE",
+    "speaker": "guide",
+    "text": "Catalonia is already open. This first source costs you no research hours.",
+    "trigger": "Stance 0 research entry",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S2_FREE.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "SRC_constitution",
+    "speaker": "marin",
+    "text": "No single model. Seventeen autonomous communities. Powers devolved region by region, at different speeds. The centre keeps wide powers to coordinate.",
+    "trigger": "Open or replay 1978 Constitution",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/SRC_constitution.mp3",
+    "estimatedSeconds": 9.4
+  },
+  {
+    "id": "SRC_basque",
+    "speaker": "marin",
+    "text": "The Basque Country and Navarre have a special fiscal regime. They collect most taxes and pay the State a negotiated sum for State services.",
+    "trigger": "Open or replay Basque Country & Navarre",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/SRC_basque.mp3",
+    "estimatedSeconds": 10.7
+  },
+  {
+    "id": "SRC_catalonia",
+    "speaker": "marin",
+    "text": "The statute was reformed in 2006. The Constitutional Court limited parts of it in 2010. The 2017 referendum was ruled unlawful, and Article 155 was invoked.",
+    "trigger": "Open or replay Catalonia",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/SRC_catalonia.mp3",
+    "estimatedSeconds": 11.6
+  },
+  {
+    "id": "SRC_andalusia",
+    "speaker": "marin",
+    "text": "Andalusia is in the common regime. It is funded through a national formula and transfers. Disputes centre on how fair the formula is.",
+    "trigger": "Open or replay Andalusia",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/SRC_andalusia.mp3",
+    "estimatedSeconds": 10.3
+  },
+  {
+    "id": "S2_CLAIM",
+    "speaker": "guide",
+    "text": "Choose the claim your reading can support. Then attach two of the sources you opened.",
+    "trigger": "Enter claim builder",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S2_CLAIM.mp3",
+    "estimatedSeconds": 6.9
+  },
+  {
+    "id": "CLAIM_0",
+    "speaker": "guide",
+    "text": "Asymmetry breeds tension because each region measures fairness against another’s deal.",
+    "trigger": "Optional read claim 0",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CLAIM_0.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "CLAIM_1",
+    "speaker": "guide",
+    "text": "The open constitutional design leaves fiscal terms permanently renegotiable.",
+    "trigger": "Optional read claim 1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CLAIM_1.mp3",
+    "estimatedSeconds": 4.3
+  },
+  {
+    "id": "CLAIM_2",
+    "speaker": "guide",
+    "text": "Tension is driven by nationalist party mobilisation.",
+    "trigger": "Optional read claim 2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CLAIM_2.mp3",
+    "estimatedSeconds": 3.5
+  },
+  {
+    "id": "CLAIM_3",
+    "speaker": "guide",
+    "text": "Litigation has replaced political bargaining.",
+    "trigger": "Optional read claim 3",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CLAIM_3.mp3",
+    "estimatedSeconds": 2.6
+  },
+  {
+    "id": "S2_full",
+    "speaker": "eze",
+    "text": "The evidence carries the claim.",
+    "trigger": "Claim fit full",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S2_full.mp3",
+    "estimatedSeconds": 2.6
+  },
+  {
+    "id": "S2_partial",
+    "speaker": "eze",
+    "text": "Half of this is assertion. The retreat will find it.",
+    "trigger": "Claim fit partial",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S2_partial.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "S2_none",
+    "speaker": "eze",
+    "text": "Nothing here supports that.",
+    "trigger": "Claim fit none",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S2_none.mp3",
+    "estimatedSeconds": 2.2
+  },
+  {
+    "id": "S3_ENTER",
+    "speaker": "guide",
+    "text": "Three disputes are arriving. Choose the institution that should handle each one. Your decision locks when you confirm it, and earlier choices can make the next dispute harder.",
+    "trigger": "Enter dispute desk",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S3_ENTER.mp3",
+    "estimatedSeconds": 12.4
+  },
+  {
+    "id": "D1",
+    "speaker": "eze",
+    "text": "Madrid and the Basque government disagree on the annual payment under their fiscal agreement.",
+    "trigger": "Dispute 1 arrives",
+    "origin": "Source verbatim",
+    "file": "assets/audio/D1.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "D2",
+    "speaker": "eze",
+    "text": "Several regions say the common funding formula shortchanges them.",
+    "trigger": "Dispute 2 arrives",
+    "origin": "Source verbatim",
+    "file": "assets/audio/D2.mp3",
+    "estimatedSeconds": 4.3
+  },
+  {
+    "id": "D3",
+    "speaker": "eze",
+    "text": "A regional parliament passes a law the central government says exceeds regional powers.",
+    "trigger": "Dispute 3 arrives",
+    "origin": "Source verbatim",
+    "file": "assets/audio/D3.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "D3_ESC",
+    "speaker": "eze",
+    "text": "A regional parliament passes a law the central government says exceeds regional powers. The region now says it will ignore an adverse ruling.",
+    "trigger": "D3 after D1 or D2 misroute",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_ESC.mp3",
+    "estimatedSeconds": 10.3
+  },
+  {
+    "id": "S3_QUESTION",
+    "speaker": "guide",
+    "text": "Which mechanism fits this dispute?",
+    "trigger": "After dispute narration",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S3_QUESTION.mp3",
+    "estimatedSeconds": 2.6
+  },
+  {
+    "id": "D1_0",
+    "speaker": "eze",
+    "text": "Settled in the bilateral commission. No court needed.",
+    "trigger": "D1_0 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D1_0.mp3",
+    "estimatedSeconds": 3.9
+  },
+  {
+    "id": "D1_1",
+    "speaker": "marin",
+    "text": "The council handles the common formula, not the Basque payment.",
+    "trigger": "D1_1 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D1_1.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "D1_2",
+    "speaker": "marin",
+    "text": "Slow and adversarial. The agreement has its own commission.",
+    "trigger": "D1_2 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D1_2.mp3",
+    "estimatedSeconds": 4.3
+  },
+  {
+    "id": "D1_3",
+    "speaker": "marin",
+    "text": "Last resort. Spain used it in 2017, after the Court, not before.",
+    "trigger": "D1_3 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D1_3.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "D2_0",
+    "speaker": "sani",
+    "text": "One region’s deal fuels others’ grievance.",
+    "trigger": "D2_0 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D2_0.mp3",
+    "estimatedSeconds": 3.1
+  },
+  {
+    "id": "D2_1",
+    "speaker": "eze",
+    "text": "Talks open with all regions. No ruling, no winner. The centre keeps the final say.",
+    "trigger": "D2_1 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D2_1.mp3",
+    "estimatedSeconds": 6.9
+  },
+  {
+    "id": "D2_2",
+    "speaker": "marin",
+    "text": "The Court judges legality, not funding formulas. The politics stays unresolved.",
+    "trigger": "D2_2 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D2_2.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "D2_3",
+    "speaker": "marin",
+    "text": "Last resort. Spain used it in 2017, after the Court, not before.",
+    "trigger": "D2_3 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D2_3.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "D3_0",
+    "speaker": "marin",
+    "text": "A private deal over a public law does not settle the constitutional question.",
+    "trigger": "D3_0 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_0.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "D3_1",
+    "speaker": "marin",
+    "text": "The council cannot rule on legality. The law stays in force.",
+    "trigger": "D3_1 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_1.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "D3_2",
+    "speaker": "eze",
+    "text": "The government challenges. The law is suspended. The Court must confirm or lift this within five months.",
+    "trigger": "D3_2 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_2.mp3",
+    "estimatedSeconds": 7.7
+  },
+  {
+    "id": "D3_3",
+    "speaker": "marin",
+    "text": "Last resort. Spain used it in 2017, after the Court, not before.",
+    "trigger": "D3_3 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_3.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "D3_ESC_OK",
+    "speaker": "eze",
+    "text": "The Court rules against the region. The region does not comply. You now have a further decision.",
+    "trigger": "D3_ESC_OK branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_ESC_OK.mp3",
+    "estimatedSeconds": 7.7
+  },
+  {
+    "id": "D3_ESC_BAD",
+    "speaker": "eze",
+    "text": "The law stays in force, and the region keeps its position.",
+    "trigger": "D3_ESC_BAD branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_ESC_BAD.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "D1_COUNTER",
+    "speaker": "eze",
+    "text": "A quiet settlement, in the most asymmetric case. Does that fit your thesis?",
+    "trigger": "D1_COUNTER branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D1_COUNTER.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "D3_FOLLOW_Q",
+    "speaker": "guide",
+    "text": "Invoke Article 155 now, or let the Court use its own enforcement powers first?",
+    "trigger": "D3_FOLLOW_Q branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_FOLLOW_Q.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "D3_FOLLOW_0",
+    "speaker": "marin",
+    "text": "Intervention needs an absolute Senate majority. Order is restored faster, but regional grievance deepens.",
+    "trigger": "D3_FOLLOW_0 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_FOLLOW_0.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "D3_FOLLOW_1",
+    "speaker": "marin",
+    "text": "Since 2015, the Court can enforce its rulings, including fines and suspension of officials. Slower enforcement keeps the centre’s legitimacy while tension persists.",
+    "trigger": "D3_FOLLOW_1 branch",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/D3_FOLLOW_1.mp3",
+    "estimatedSeconds": 10.3
+  },
+  {
+    "id": "S4_EZE",
+    "speaker": "eze",
+    "text": "Three Spanish features. Tell us what Nigeria can take, and what it cannot.",
+    "trigger": "Roundtable opening 1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S4_EZE.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "S4_MARIN",
+    "speaker": "marin",
+    "text": "Spain’s system works because of how it was built, not only what it contains. Copy the parts and you may miss that.",
+    "trigger": "Roundtable opening 2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S4_MARIN.mp3",
+    "estimatedSeconds": 9.9
+  },
+  {
+    "id": "S4_SANI",
+    "speaker": "sani",
+    "text": "Spain has no resource control history. We do. Start there.",
+    "trigger": "Roundtable opening 3; subject expert review before release",
+    "origin": "Source verbatim; review flag",
+    "file": "assets/audio/S4_SANI.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "S4_GUIDE",
+    "speaker": "guide",
+    "text": "For each feature, choose Transfer, Adapt, or Reject. A source check costs six reserve hours. You can decide without a check, but borrowing without checking raises fit risk.",
+    "trigger": "After roundtable opening",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S4_GUIDE.mp3",
+    "estimatedSeconds": 12.4
+  },
+  {
+    "id": "FEATURE_A",
+    "speaker": "guide",
+    "text": "Bilateral fiscal deals for particular regions.",
+    "trigger": "Introduce card A",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/FEATURE_A.mp3",
+    "estimatedSeconds": 3.1
+  },
+  {
+    "id": "TEST_A",
+    "speaker": "sani",
+    "text": "Give one state a special deal and thirty-five will want theirs.",
+    "trigger": "Nigerian test A",
+    "origin": "Source verbatim",
+    "file": "assets/audio/TEST_A.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "CHECK_A",
+    "speaker": "marin",
+    "text": "The Basque and Navarre arrangements rest on historic rights recognised in the Constitution itself. They were not designed as a template.",
+    "trigger": "Paid source check A",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/CHECK_A.mp3",
+    "estimatedSeconds": 9.4
+  },
+  {
+    "id": "FEATURE_B",
+    "speaker": "guide",
+    "text": "Sector conferences and signed cooperation agreements.",
+    "trigger": "Introduce card B",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/FEATURE_B.mp3",
+    "estimatedSeconds": 3.1
+  },
+  {
+    "id": "TEST_B",
+    "speaker": "sani",
+    "text": "Spain’s calm owes something to shared parties. Ours do not always align.",
+    "trigger": "Nigerian test B",
+    "origin": "Source verbatim",
+    "file": "assets/audio/TEST_B.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "CHECK_B",
+    "speaker": "marin",
+    "text": "Sector conferences, cooperation agreements and party alignment each help prevent contestation.",
+    "trigger": "Paid source check B",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/CHECK_B.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "FEATURE_C",
+    "speaker": "guide",
+    "text": "Automatic suspension of a contested regional law while the Constitutional Court decides.",
+    "trigger": "Introduce card C",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/FEATURE_C.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "TEST_C",
+    "speaker": "sani",
+    "text": "Our Supreme Court already hears these cases. And this power would sit in Abuja.",
+    "trigger": "Nigerian test C",
+    "origin": "Source verbatim",
+    "file": "assets/audio/TEST_C.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "CHECK_C",
+    "speaker": "marin",
+    "text": "The power sits in Spain’s Constitution, Article 161.2, and lapses after five months unless the Court confirms it. Nigeria would need an amendment.",
+    "trigger": "Paid source check C",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/CHECK_C.mp3",
+    "estimatedSeconds": 10.3
+  },
+  {
+    "id": "DECISION_A_0",
+    "speaker": "sani",
+    "text": "You have reopened resource control.",
+    "trigger": "Feature decision A_0",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_A_0.mp3",
+    "estimatedSeconds": 2.6
+  },
+  {
+    "id": "DECISION_A_1",
+    "speaker": "marin",
+    "text": "Keep the principle: open, rules-based arrangements any state can qualify for.",
+    "trigger": "Feature decision A_1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_A_1.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "DECISION_A_2",
+    "speaker": "eze",
+    "text": "Safe. But you lose Spain’s lesson on transparent, negotiated rules.",
+    "trigger": "Feature decision A_2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_A_2.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "DECISION_B_0",
+    "speaker": "eze",
+    "text": "No amendment needed. Do it.",
+    "trigger": "Feature decision B_0",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_B_0.mp3",
+    "estimatedSeconds": 2.6
+  },
+  {
+    "id": "DECISION_B_1",
+    "speaker": "marin",
+    "text": "Reasonable, but do not overbuild what already works.",
+    "trigger": "Feature decision B_1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_B_1.mp3",
+    "estimatedSeconds": 3.9
+  },
+  {
+    "id": "DECISION_B_2",
+    "speaker": "marin",
+    "text": "Then states keep reaching for the courts first.",
+    "trigger": "Feature decision B_2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_B_2.mp3",
+    "estimatedSeconds": 3.9
+  },
+  {
+    "id": "DECISION_C_0",
+    "speaker": "sani",
+    "text": "Abuja could freeze any state law. No.",
+    "trigger": "Feature decision C_0",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_C_0.mp3",
+    "estimatedSeconds": 3.5
+  },
+  {
+    "id": "DECISION_C_1",
+    "speaker": "eze",
+    "text": "With what safeguard? Otherwise it is a weapon.",
+    "trigger": "Feature decision C_1",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_C_1.mp3",
+    "estimatedSeconds": 3.9
+  },
+  {
+    "id": "DECISION_C_2",
+    "speaker": "marin",
+    "text": "In Spain the centre holds it. Your states would never accept that.",
+    "trigger": "Feature decision C_2",
+    "origin": "Source verbatim",
+    "file": "assets/audio/DECISION_C_2.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "S4_REJECT",
+    "speaker": "marin",
+    "text": "Rejecting is easy. What would you borrow?",
+    "trigger": "Opening stance 2, Reject without check",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S4_REJECT.mp3",
+    "estimatedSeconds": 3.5
+  },
+  {
+    "id": "S4_ART155",
+    "speaker": "sani",
+    "text": "You have just shown us what Abuja would do with it.",
+    "trigger": "Borrow Card C after Article 155 follow-up",
+    "origin": "Source verbatim",
+    "file": "assets/audio/S4_ART155.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "S4_NO_HOURS",
+    "speaker": "guide",
+    "text": "There are not enough reserve hours for another check. The earlier sources remain in your brief notes.",
+    "trigger": "Attempt source check with under six hours",
+    "origin": "New interface guidance",
+    "file": "assets/audio/S4_NO_HOURS.mp3",
+    "estimatedSeconds": 7.7
+  },
+  {
+    "id": "CLOSE_Q",
+    "speaker": "guide",
+    "text": "Close your brief with one usable lesson and one Nigerian limit. Choose a lesson, then the limit that qualifies it.",
+    "trigger": "Closing line builder",
+    "origin": "New interaction adaptation",
+    "file": "assets/audio/CLOSE_Q.mp3",
+    "estimatedSeconds": 9.0
+  },
+  {
+    "id": "LESSON_0",
+    "speaker": "guide",
+    "text": "Nigeria can use regular sector conferences and written cooperation agreements to resolve disagreements before litigation.",
+    "trigger": "Read lesson option 0",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LESSON_0.mp3",
+    "estimatedSeconds": 6.9
+  },
+  {
+    "id": "LESSON_1",
+    "speaker": "guide",
+    "text": "Nigeria can adapt transparent negotiated fiscal rules so that every state has a fair route to participation.",
+    "trigger": "Read lesson option 1",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LESSON_1.mp3",
+    "estimatedSeconds": 7.7
+  },
+  {
+    "id": "LESSON_2",
+    "speaker": "guide",
+    "text": "Nigeria can match each dispute to negotiation, coordination or adjudication before choosing a response.",
+    "trigger": "Read lesson option 2",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LESSON_2.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "LESSON_3",
+    "speaker": "guide",
+    "text": "Nigeria can learn from Spain by seeking better outcomes and keeping an open mind about reform.",
+    "trigger": "Read lesson option 3",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LESSON_3.mp3",
+    "estimatedSeconds": 7.3
+  },
+  {
+    "id": "LIMIT_0",
+    "speaker": "guide",
+    "text": "But the constitution and the equal status of states constrain how such arrangements can be introduced.",
+    "trigger": "Read limit option 0",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LIMIT_0.mp3",
+    "estimatedSeconds": 7.3
+  },
+  {
+    "id": "LIMIT_1",
+    "speaker": "guide",
+    "text": "But party alignment and state-centre trust will shape whether cooperation works in practice.",
+    "trigger": "Read limit option 1",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LIMIT_1.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "LIMIT_2",
+    "speaker": "guide",
+    "text": "But resource control, derivation and FAAC politics limit the case for copying special fiscal deals.",
+    "trigger": "Read limit option 2",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LIMIT_2.mp3",
+    "estimatedSeconds": 6.9
+  },
+  {
+    "id": "LIMIT_3",
+    "speaker": "guide",
+    "text": "But progress will depend on everyone making a strong effort and remaining positive about change.",
+    "trigger": "Read limit option 3",
+    "origin": "New structured closing option",
+    "file": "assets/audio/LIMIT_3.mp3",
+    "estimatedSeconds": 6.9
+  },
+  {
+    "id": "CLOSE_ACCEPT",
+    "speaker": "eze",
+    "text": "That goes in the brief.",
+    "trigger": "Submit closing line",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CLOSE_ACCEPT.mp3",
+    "estimatedSeconds": 2.6
+  },
+  {
+    "id": "S5_ENTER",
+    "speaker": "guide",
+    "text": "The retreat has begun. A delegate will test the weakest part of your brief. Your earlier choices are on the table.",
+    "trigger": "Enter retreat",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S5_ENTER.mp3",
+    "estimatedSeconds": 9.4
+  },
+  {
+    "id": "CHALLENGE_asymmetry",
+    "speaker": "governors",
+    "text": "Nigeria’s states are equal. Why does Spain’s unequal design tell us anything?",
+    "trigger": "Weakest normalised strand asymmetry",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CHALLENGE_asymmetry.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "CHALLENGE_mechanisms",
+    "speaker": "federal",
+    "text": "Which Spanish mechanism would have settled our FAAC dispute? Be specific.",
+    "trigger": "Weakest normalised strand mechanisms",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CHALLENGE_mechanisms.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "CHALLENGE_transfer",
+    "speaker": "sani",
+    "text": "Name one thing in your brief that survives Nigerian politics.",
+    "trigger": "Weakest normalised strand transfer",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CHALLENGE_transfer.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "CHALLENGE_limits",
+    "speaker": "assembly",
+    "text": "You lead with a lesson. What would make it fail here?",
+    "trigger": "Weakest normalised strand limits",
+    "origin": "Source verbatim",
+    "file": "assets/audio/CHALLENGE_limits.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "S5_RESPONSE",
+    "speaker": "guide",
+    "text": "Concede and adjust, defend using your sources, or reframe this as further research.",
+    "trigger": "Retreat response prompt",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S5_RESPONSE.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "VERDICT_concede",
+    "speaker": "eze",
+    "text": "The delegates accept the revised brief and note your correction.",
+    "trigger": "Retreat response concede",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/VERDICT_concede.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "VERDICT_defend_ok",
+    "speaker": "eze",
+    "text": "The delegates test your sources. Your defence holds.",
+    "trigger": "Retreat response defend_ok",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/VERDICT_defend_ok.mp3",
+    "estimatedSeconds": 3.9
+  },
+  {
+    "id": "VERDICT_defend_bad",
+    "speaker": "eze",
+    "text": "The delegates test your sources. The gap in your reading shows.",
+    "trigger": "Retreat response defend_bad",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/VERDICT_defend_bad.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "VERDICT_reframe",
+    "speaker": "eze",
+    "text": "The delegates note that the question was not answered.",
+    "trigger": "Retreat response reframe",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/VERDICT_reframe.mp3",
+    "estimatedSeconds": 4.3
+  },
+  {
+    "id": "S5_STANCE",
+    "speaker": "guide",
+    "text": "Return to your opening position. Which view do you hold now?",
+    "trigger": "Repeat stance poll",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S5_STANCE.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "S5_HELD",
+    "speaker": "eze",
+    "text": "You held your opening position. Review how well your sources now support it.",
+    "trigger": "Same stance at close",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S5_HELD.mp3",
+    "estimatedSeconds": 6.0
+  },
+  {
+    "id": "S5_CHANGED",
+    "speaker": "eze",
+    "text": "Your position changed. Compare your opening view with the one you are taking away.",
+    "trigger": "Different stance at close",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/S5_CHANGED.mp3",
+    "estimatedSeconds": 6.5
+  },
+  {
+    "id": "BAND_0",
+    "speaker": "eze",
+    "text": "Your brief is adopted. The delegates accept its mechanism recommendations.",
+    "trigger": "Final outcome band 0",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/BAND_0.mp3",
+    "estimatedSeconds": 4.8
+  },
+  {
+    "id": "BAND_1",
+    "speaker": "eze",
+    "text": "Your brief is adopted with revisions. One section needs further work.",
+    "trigger": "Final outcome band 1",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/BAND_1.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "BAND_2",
+    "speaker": "eze",
+    "text": "Your brief is returned. Revisit the weak sections before the next round.",
+    "trigger": "Final outcome band 2",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/BAND_2.mp3",
+    "estimatedSeconds": 5.6
+  },
+  {
+    "id": "BAND_3",
+    "speaker": "eze",
+    "text": "Your brief is rejected. Review how you read Spain and how you judged Nigeria’s limits.",
+    "trigger": "Final outcome band 3",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/BAND_3.mp3",
+    "estimatedSeconds": 6.9
+  },
+  {
+    "id": "DEBRIEF_LESSONS",
+    "speaker": "guide",
+    "text": "Asymmetry is a design choice with costs. Match the dispute to the mechanism. Borrow principles with clear limits. A brief must survive challenge, not only read well.",
+    "trigger": "Optional final learning summary",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/DEBRIEF_LESSONS.mp3",
+    "estimatedSeconds": 12.0
+  },
+  {
+    "id": "DEBRIEF_REVIEW",
+    "speaker": "guide",
+    "text": "Open your choices to revisit the decisions, or open your brief to read the record. Restart begins a new attempt.",
+    "trigger": "Enter debrief controls",
+    "origin": "Adapted from source brief",
+    "file": "assets/audio/DEBRIEF_REVIEW.mp3",
+    "estimatedSeconds": 9.0
+  },
+  {
+    "id": "HELP_RESEARCH",
+    "speaker": "guide",
+    "text": "Select a map point or its matching source button. Read or listen, then choose another source.",
+    "trigger": "Research Help",
+    "origin": "New interface guidance",
+    "file": "assets/audio/HELP_RESEARCH.mp3",
+    "estimatedSeconds": 7.3
+  },
+  {
+    "id": "HELP_OPTIONS",
+    "speaker": "guide",
+    "text": "Select an option, then confirm. Once confirmed, your decision is saved.",
+    "trigger": "Options Help",
+    "origin": "New interface guidance",
+    "file": "assets/audio/HELP_OPTIONS.mp3",
+    "estimatedSeconds": 5.2
+  },
+  {
+    "id": "HELP_CAPTIONS",
+    "speaker": "guide",
+    "text": "Captions show the current spoken line. Full source text and your record are available in Brief Notes.",
+    "trigger": "Settings Help",
+    "origin": "New interface guidance",
+    "file": "assets/audio/HELP_CAPTIONS.mp3",
+    "estimatedSeconds": 7.7
+  },
+  {
+    "id": "RESUME",
+    "speaker": "guide",
+    "text": "Your saved brief is ready. Continue from where you stopped, or restart.",
+    "trigger": "Saved run landing",
+    "origin": "New interface guidance",
+    "file": "assets/audio/RESUME.mp3",
+    "estimatedSeconds": 5.6
+  }
+]

@@ -1,0 +1,1 @@
+{"name":"borrowed-blueprint-replication","private":true,"type":"module","scripts":{"test":"node ../verification/engine.test.mjs"}}
