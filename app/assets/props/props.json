@@ -1,0 +1,160 @@
+{
+ "P01-naira-bundle": {
+  "file": "assets/props/P01-naira-bundle.webp",
+  "width": 768,
+  "height": 391,
+  "aspect": 1.9642
+ },
+ "P02-revenue-bowl": {
+  "file": "assets/props/P02-revenue-bowl.webp",
+  "width": 768,
+  "height": 495,
+  "aspect": 1.5515
+ },
+ "P03-oil-barrel": {
+  "file": "assets/props/P03-oil-barrel.webp",
+  "width": 473,
+  "height": 768,
+  "aspect": 0.6159
+ },
+ "P04-gavel": {
+  "file": "assets/props/P04-gavel.webp",
+  "width": 768,
+  "height": 562,
+  "aspect": 1.3665
+ },
+ "P05-balance-scale": {
+  "file": "assets/props/P05-balance-scale.webp",
+  "width": 768,
+  "height": 330,
+  "aspect": 2.3273
+ },
+ "P06-constitution-book": {
+  "file": "assets/props/P06-constitution-book.webp",
+  "width": 513,
+  "height": 768,
+  "aspect": 0.668
+ },
+ "P07-coin-stack": {
+  "file": "assets/props/P07-coin-stack.webp",
+  "width": 680,
+  "height": 698,
+  "aspect": 0.9742
+ },
+ "P08-regional-strongbox": {
+  "file": "assets/props/P08-regional-strongbox.webp",
+  "width": 741,
+  "height": 582,
+  "aspect": 1.2732
+ },
+ "P09-sealed-envelope": {
+  "file": "assets/props/P09-sealed-envelope.webp",
+  "width": 768,
+  "height": 554,
+  "aspect": 1.3863
+ },
+ "P10-gold-envelope": {
+  "file": "assets/props/P10-gold-envelope.webp",
+  "width": 737,
+  "height": 532,
+  "aspect": 1.3853
+ },
+ "P11-ballot-box": {
+  "file": "assets/props/P11-ballot-box.webp",
+  "width": 670,
+  "height": 763,
+  "aspect": 0.8781
+ },
+ "P12-rubber-stamp": {
+  "file": "assets/props/P12-rubber-stamp.webp",
+  "width": 541,
+  "height": 687,
+  "aspect": 0.7875
+ },
+ "P13-padlock": {
+  "file": "assets/props/P13-padlock.webp",
+  "width": 503,
+  "height": 768,
+  "aspect": 0.6549
+ },
+ "P14-hourglass": {
+  "file": "assets/props/P14-hourglass.webp",
+  "width": 381,
+  "height": 768,
+  "aspect": 0.4961
+ },
+ "P15-desk-calendar": {
+  "file": "assets/props/P15-desk-calendar.webp",
+  "width": 746,
+  "height": 768,
+  "aspect": 0.9714
+ },
+ "P16-magnifier": {
+  "file": "assets/props/P16-magnifier.webp",
+  "width": 768,
+  "height": 422,
+  "aspect": 1.8199
+ },
+ "P17-case-folder": {
+  "file": "assets/props/P17-case-folder.webp",
+  "width": 768,
+  "height": 594,
+  "aspect": 1.2929
+ },
+ "P18-round-table": {
+  "file": "assets/props/P18-round-table.webp",
+  "width": 768,
+  "height": 611,
+  "aspect": 1.257
+ },
+ "P19-bilateral-table": {
+  "file": "assets/props/P19-bilateral-table.webp",
+  "width": 759,
+  "height": 743,
+  "aspect": 1.0215
+ },
+ "P20-court-facade": {
+  "file": "assets/props/P20-court-facade.webp",
+  "width": 768,
+  "height": 723,
+  "aspect": 1.0622
+ },
+ "P21-desk-microphone": {
+  "file": "assets/props/P21-desk-microphone.webp",
+  "width": 411,
+  "height": 695,
+  "aspect": 0.5914
+ },
+ "P22-signed-agreement": {
+  "file": "assets/props/P22-signed-agreement.webp",
+  "width": 768,
+  "height": 657,
+  "aspect": 1.1689,
+  "touchesFrame": [
+   "left",
+   "right",
+   "bottom"
+  ]
+ },
+ "P23-desk-calculator": {
+  "file": "assets/props/P23-desk-calculator.webp",
+  "width": 768,
+  "height": 613,
+  "aspect": 1.2529
+ },
+ "P24-flag-spain": {
+  "file": "assets/props/P24-flag-spain.webp",
+  "width": 641,
+  "height": 768,
+  "aspect": 0.8346,
+  "touchesFrame": [
+   "bottom"
+  ]
+ },
+ "P25-flag-nigeria": {
+  "file": "assets/props/P25-flag-nigeria.webp",
+  "width": 681,
+  "height": 768,
+  "aspect": 0.8867
+ }
+}

@@ -21,8 +21,8 @@ button,input,select{font:inherit;color:inherit}
 /* ---- buttons: hover 150ms, press 90ms, release on a small spring ---- */
 button{cursor:pointer;min-height:44px;border:0;border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;line-height:1.3;letter-spacing:0;
  transition:background var(--t-hover),box-shadow var(--t-hover),color var(--t-hover),opacity var(--t-hover),scale 380ms var(--spring-pop)}
-button:hover{--lg-tint:rgba(255,255,255,.5)}
-:is(#actions,.ghost) :is(button:not(.primary)):hover{--lg-tint:rgba(255,255,255,.62)}
+button:hover{--lg-tint:rgba(255,255,255,.36)}
+:is(#actions,.ghost) :is(button:not(.primary)):hover{--lg-tint:rgba(255,255,255,.4)}
 button:active{scale:.97;transition:scale var(--t-press) var(--out),background var(--t-hover)}
 button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
 button:disabled{cursor:not-allowed;color:#1d232170}
@@ -31,7 +31,7 @@ button:disabled:active{scale:1}
 button.primary{color:#fbfaf7;--lg-tint:rgba(29,35,33,.72)!important}
 button.primary:hover{--lg-tint:rgba(29,35,33,.82)!important}
 button.primary::after{box-shadow:inset 2px 2px 1px 0 rgba(255,255,255,.28),inset -1px -1px 1px 1px rgba(255,255,255,.18)}
-button.selected,[aria-pressed=true]:not(#sound):not(#cc){--lg-tint:rgba(255,236,220,.62)!important;box-shadow:0 6px 18px #ff7a1a24,var(--lg-shadow)}
+button.selected,[aria-pressed=true]:not(#sound):not(#cc){--lg-tint:rgba(255,244,235,.4)!important;box-shadow:0 6px 18px #ff7a1a24,var(--lg-shadow)}
 button.selected::after,[aria-pressed=true]:not(#sound):not(#cc)::after{box-shadow:inset 0 0 0 1.5px var(--hot),var(--lg-shine)!important}
 button.small{font-size:12px;min-height:44px}
 button.icon,header button{width:44px;height:44px;padding:0;display:inline-grid;place-items:center}
@@ -44,14 +44,16 @@ button.icon:active,header button:active{scale:.94;transition:scale var(--t-press
    overshoot curve. ---- */
 :root{--lg-tint:rgba(255,255,255,.25);--lg-shine:inset 2px 2px 1px 0 rgba(255,255,255,.5),inset -1px -1px 1px 1px rgba(255,255,255,.5);
  --lg-shadow:0 6px 6px rgba(0,0,0,.2),0 0 20px rgba(0,0,0,.1);--lg-bounce:cubic-bezier(.175,.885,.32,2.2)}
-:where(button:not(.portrait-hit):not(.hit):not(.marker):not(.read):not(.drow):not(.back):not(header nav button):not(.guide-controls button):not(.audio-buttons button),header nav,.status-chip,.guide-controls,.person-card,#toast,.marker .label,.read .dot,.dgroup,#caption,dialog,.flyer){position:relative;isolation:isolate;background:transparent;box-shadow:var(--lg-shadow)}
-:where(button:not(.portrait-hit):not(.hit):not(.marker):not(.read):not(.drow):not(.back):not(header nav button):not(.guide-controls button):not(.audio-buttons button),header nav,.status-chip,.guide-controls,.person-card,#toast,.marker .label,.read .dot,.dgroup,#caption,dialog,.flyer)::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
- -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);filter:url(#glass-distortion)}
-:where(button:not(.portrait-hit):not(.hit):not(.marker):not(.read):not(.drow):not(.back):not(header nav button):not(.guide-controls button):not(.audio-buttons button),header nav,.status-chip,.guide-controls,.person-card,#toast,.marker .label,.read .dot,.dgroup,#caption,dialog,.flyer)::after{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:var(--lg-tint);box-shadow:var(--lg-shine)}
+:where(button:not(.portrait-hit):not(.hit):not(.marker):not(.read):not(.drow):not(.back):not(header nav button):not(.guide-controls button):not(.audio-buttons button),header nav,.status-chip,.guide-controls,.person-card,#toast,.marker .label,.read .dot,.dgroup,#caption,dialog,.flyer,.end-detail,#film,#hx){position:relative;isolation:isolate;background:transparent;box-shadow:var(--lg-shadow)}
+:where(button:not(.portrait-hit):not(.hit):not(.marker):not(.read):not(.drow):not(.back):not(header nav button):not(.guide-controls button):not(.audio-buttons button),header nav,.status-chip,.guide-controls,.person-card,#toast,.marker .label,.read .dot,.dgroup,#caption,dialog,.flyer,.end-detail,#film,#hx)::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+ -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);filter:url(#glass-distortion);
+ /* Own compositing layer: changes to the content on top (a moving waveform, text) don't re-run the CPU lens filter. */
+ will-change:transform}
+:where(button:not(.portrait-hit):not(.hit):not(.marker):not(.read):not(.drow):not(.back):not(header nav button):not(.guide-controls button):not(.audio-buttons button),header nav,.status-chip,.guide-controls,.person-card,#toast,.marker .label,.read .dot,.dgroup,#caption,dialog,.flyer,.end-detail,#film,#hx)::after{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:var(--lg-tint);box-shadow:var(--lg-shine)}
 /* Tints: chrome at the repo's 25%; buttons a touch denser so their labels read; reading panels denser again.
    Buttons set their own tint so a button inside a panel doesn't inherit the panel's. */
-button{--lg-tint:rgba(255,255,255,.34)}
-:is(#actions,.ghost) :is(button:not(.primary),.summary){--lg-tint:rgba(255,255,255,.46)}
+button{--lg-tint:rgba(255,255,255,.25)}
+:is(#actions,.ghost) :is(button:not(.primary),.summary){--lg-tint:rgba(255,255,255,.28)}
 /* Map place names step aside where a pin and its label stand. */
 #atlas text{transition:opacity 220ms var(--out)}
 #atlas text.tucked{opacity:0}
@@ -85,16 +87,16 @@ small,.meta{font-size:12px;line-height:1.4;font-weight:500;color:var(--muted);fo
 .marker .pin img{position:relative;display:block;width:24px;height:36px;filter:drop-shadow(0 4px 4px #3b1e0a40)}
 .marker .ripple{position:absolute;left:50%;bottom:-3px;width:26px;height:10px;margin-left:-13px;border-radius:50%;border:1.5px solid #ff7a1a;box-shadow:0 0 10px #ff7a1a99,inset 0 0 6px #ff7a1a66;opacity:0;pointer-events:none;animation:ripple 1.6s var(--out) 2 both;animation-delay:calc(var(--i,0) * 70ms + 300ms)}
 .marker .ripple+.ripple{animation-delay:calc(var(--i,0) * 70ms + 820ms)}
-.marker.selected .ripple{animation:ripple 1.8s var(--out) infinite}
+.marker.selected .ripple{animation:ripple 1.8s var(--out) 4}
 .marker.selected .ripple+.ripple{animation-delay:.9s}
 .marker:hover .pin,.marker:focus-visible .pin{scale:1.12;translate:0 -3px}
 .marker:active .pin{scale:.94}
 /* Labels: high-contrast glass with a soft light halo so the text reads over any part of the map. */
-.marker .label{margin-bottom:22px;padding:7px 12px;border-radius:12px;font-size:12px;font-weight:700;line-height:1.2;letter-spacing:.01em;color:#141a18;white-space:nowrap;--lg-tint:rgba(255,253,249,.5);
+.marker .label{margin-bottom:22px;padding:7px 12px;border-radius:12px;font-size:12px;font-weight:700;line-height:1.2;letter-spacing:.01em;color:#141a18;white-space:nowrap;--lg-tint:rgba(255,255,255,.28);
  text-shadow:0 0 6px #fffdf9,0 0 2px #fffdf9;box-shadow:0 0 0 4px #fffdf933,0 6px 14px #1d232129;transition:scale 380ms var(--lg-bounce)}
 .marker.selected .label{color:#7a3a0c}
 .marker.selected .label::after{box-shadow:inset 0 0 0 1.5px var(--hot),var(--lg-shine)}
-.marker.opened .label{--lg-tint:rgba(255,246,238,.62)}
+.marker.opened .label{--lg-tint:rgba(255,248,242,.36)}
 .marker.flip{flex-direction:row-reverse;transform:translate(calc(-100% + 12px),calc(-100% + 2px))}
 @keyframes pin-drop{from{opacity:0;translate:0 -14px;scale:.8}to{opacity:1;translate:0 0;scale:1}}
 @keyframes ripple{0%{opacity:.9;scale:.4}100%{opacity:0;scale:2.6}}
@@ -135,9 +137,9 @@ header nav:not(:hover):not(:focus-within)>button:not(#menu){max-width:0;margin-r
 /* The rail fills the height down to whatever is docked bottom right (character card or its replay tab);
    app.js measures that and sets --dock. Growing or shrinking follows the Apple sheet curve. */
 #actions{position:fixed;right:var(--gap);top:96px;width:var(--rail);display:flex;flex-direction:column;gap:8px;max-height:calc(100dvh - 96px - var(--gap) - var(--dock,0px));overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:4px;z-index:5;transition:max-height 380ms var(--ios)}
-:is(#actions,.ghost)>button,:is(#actions,.ghost) .group>button{text-align:left;width:100%;font-size:14px;line-height:1.45;font-weight:600;padding:13px 18px;border-radius:18px;text-wrap:pretty}
+:is(#actions,.ghost)>button,:is(#actions,.ghost) .group>button{text-align:left;width:100%;font-size:14px;line-height:1.45;font-weight:400;padding:13px 18px;border-radius:18px;text-wrap:pretty}
 :is(#actions,.ghost) .group{display:flex;flex-direction:column;gap:8px;margin:0}
-:is(#actions,.ghost) .group[role=radiogroup]>button{font-weight:500}
+:is(#actions,.ghost) .group[role=radiogroup]>button{font-weight:400}
 :is(#actions,.ghost) .group[role=radiogroup]>button.selected{font-weight:600}
 :is(#actions,.ghost)>button.primary{margin-top:8px;border-radius:999px;text-align:center}
 :is(#actions,.ghost)>button.primary+button:not(.primary){text-align:center;border-radius:999px}
@@ -158,16 +160,18 @@ fieldset{border:0;padding:0;margin:0}
 legend{font-size:12px;margin-bottom:12px}
 .option-row{position:relative;display:grid;grid-template-rows:1fr;transition:grid-template-rows 360ms var(--calm),margin 360ms var(--calm)}
 .option-row>.option{min-height:0}
-/* While its line is being read, the option's slot closes up (its content flew to the caption). */
-.option-row.reading{grid-template-rows:0fr;margin-top:-8px;overflow:hidden;pointer-events:none}
-.option-row.reading>.option{padding-block:0;color:transparent;transition:padding 360ms var(--calm),color 120ms var(--in)}
-.option-row.reading>.read{opacity:0;scale:.5;transition:opacity 120ms var(--in),scale 200ms var(--in)}
-.flyer{position:fixed;z-index:50;pointer-events:none;border-radius:18px;--lg-tint:rgba(255,236,220,.72)}
+/* While its line is being read, the option stays in place but turns grey and inactive (its words are on their way
+   to the caption); it returns to normal when the line ends. */
+.option-row.reading{pointer-events:none}
+.option-row.reading>.option{--lg-tint:rgba(118,122,120,.26)!important;color:#1d23215c;transition:color 260ms var(--out)}
+.option-row.reading>.option::after{box-shadow:none}
+.option-row.reading>.read .dot{--lg-tint:rgba(118,122,120,.3);opacity:.55;transition:opacity 260ms var(--out)}
+.flyer{position:fixed;z-index:50;pointer-events:none;border-radius:18px;--lg-tint:rgba(255,244,235,.45)}
 .flyer.ripple{--lg-tint:rgba(255,122,26,.12);box-shadow:0 0 0 1.5px #ff7a1acc,0 0 18px #ff7a1a80}
 .option-row .option{display:block;width:100%;text-align:left;border-radius:18px;font-size:14px;line-height:1.45;font-weight:500;padding:13px 40px 13px 16px;text-wrap:pretty}
 /* Play sits inside the option's lower-right corner: a 26px glass dot in a 44px hit area. */
 .option-row .read{position:absolute;right:0;bottom:0;width:44px;height:44px;min-height:44px;padding:0;display:grid;place-items:center;background:transparent;box-shadow:none;z-index:1}
-.read .dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;--lg-tint:rgba(255,255,255,.45);transition:scale 400ms var(--lg-bounce)}
+.read .dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;--lg-tint:rgba(255,255,255,.28);transition:scale 400ms var(--lg-bounce)}
 .read .dot img{width:11px!important;height:11px!important;margin-left:1px}
 .read:hover .dot{scale:1.14}
 .read:active .dot{scale:.92}
@@ -248,7 +252,7 @@ legend{font-size:12px;margin-bottom:12px}
 .ribbon path:nth-child(3){opacity:.35}
 
 /* ---- captions and notices ---- */
-#caption{position:fixed;left:32px;bottom:110px;max-width:min(560px,calc(100vw - 390px));max-height:40dvh;overflow:auto;overscroll-behavior:contain;padding:20px 24px;border-radius:22px;--lg-tint:rgba(252,251,247,.5);z-index:9;font-size:max(18px,1.15rem);line-height:1.45;font-weight:500;text-wrap:pretty;
+#caption{position:fixed;left:32px;bottom:110px;max-width:min(560px,calc(100vw - 390px));max-height:40dvh;overflow:auto;overscroll-behavior:contain;padding:20px 24px;border-radius:22px;--lg-tint:rgba(255,255,255,.3);z-index:9;font-size:max(18px,1.15rem);line-height:1.45;font-weight:500;text-wrap:pretty;
  transition:opacity 220ms var(--out),translate 460ms var(--spring)}
 @starting-style{#caption{opacity:0;translate:0 10px}}
 #caption.held{visibility:hidden}
@@ -260,12 +264,12 @@ legend{font-size:12px;margin-bottom:12px}
 #caption .caption-controls{display:flex;gap:8px;margin-top:16px}
 #caption button{font-size:12px;min-height:44px}
 #caption .speaker-label{display:block;margin-bottom:8px}
-#toast{position:fixed;left:50%;top:90px;translate:-50% -8px;scale:.96;max-width:calc(100vw - 32px);--lg-tint:rgba(252,251,247,.55);border-radius:18px;padding:12px 18px;z-index:20;font-size:13px;font-weight:600;line-height:1.4;opacity:0;pointer-events:none;
+#toast{position:fixed;left:50%;top:90px;translate:-50% -8px;scale:.96;max-width:calc(100vw - 32px);--lg-tint:rgba(255,255,255,.3);border-radius:18px;padding:12px 18px;z-index:20;font-size:13px;font-weight:600;line-height:1.4;opacity:0;pointer-events:none;
  transition:opacity 160ms var(--in),translate 200ms var(--in),scale 200ms var(--in)}
 #toast.visible{opacity:1;translate:-50% 0;scale:1;transition:opacity 220ms var(--out),translate 460ms var(--spring),scale 460ms var(--spring)}
 
 /* ---- panels grow from the tools they came from (top right), and close faster than they open ---- */
-dialog{position:fixed;inset:90px 20px 20px auto;margin:0;width:min(400px,calc(100vw - 40px));max-height:calc(100dvh - 110px);border:0;border-radius:28px;padding:0;--lg-tint:rgba(252,251,247,.58);color:var(--ink);overflow:hidden;
+dialog{position:fixed;inset:90px 20px 20px auto;margin:0;width:min(400px,calc(100vw - 40px));max-height:calc(100dvh - 110px);border:0;border-radius:28px;padding:0;--lg-tint:rgba(255,255,255,.32);color:var(--ink);overflow:hidden;
  transform-origin:100% 0;opacity:0;translate:24px 0;scale:.98;
  transition:opacity 160ms var(--in),translate 220ms var(--in),scale 220ms var(--in),overlay 220ms allow-discrete,display 220ms allow-discrete}
 dialog[open]{display:flex;flex-direction:column;opacity:1;translate:0 0;scale:1;transition:opacity 220ms var(--out),translate var(--t-open) var(--ios),scale var(--t-open) var(--ios),overlay var(--t-open) allow-discrete,display var(--t-open) allow-discrete}
@@ -282,7 +286,7 @@ dialog[open]::backdrop{background:#1d23211a}
 .drawer-head .close{grid-column:3;justify-self:end}
 #drawerBody{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;display:grid;padding:16px 16px 20px}
 #drawerBody>.pane{grid-area:1/1;min-width:0}
-.dgroup{border-radius:18px;margin:0 0 16px;--lg-tint:rgba(255,255,255,.42)}
+.dgroup{border-radius:18px;margin:0 0 16px;--lg-tint:rgba(255,255,255,.22)}
 .drow{display:flex;align-items:center;gap:12px;width:100%;min-height:48px;margin:0;padding:12px 16px;border-radius:0;background:transparent;box-shadow:none;text-align:left;font-size:15px;font-weight:600;cursor:pointer}
 .drow+.drow{box-shadow:inset 0 1px 0 var(--hair)}
 .drow:hover{background:#ffffff8c}
@@ -309,6 +313,100 @@ dialog[open]::backdrop{background:#1d23211a}
 .dev-sign .hint{min-height:1.4em;margin:0;color:#b3261e}
 #dev{position:fixed;bottom:0;left:0;z-index:30;background:white;padding:8px;font-size:11px;max-width:100%}
 #dev select{min-height:30px;font-size:11px;padding:4px;width:180px}
+
+
+
+/* ---- Explainer film card: a small glass card on the left side, above the guide (and the caption); the film's edges
+   feather into the glass like light diffusing at its rim. Hover or tap springs it out toward the middle of the map
+   with controls; it folds back faster than it opens. ---- */
+#film{display:none;position:fixed;left:var(--gap);bottom:var(--filmb,112px);width:288px;padding:0;border-radius:22px;z-index:7;--lg-tint:rgba(252,251,247,.05);--lg-shine:inset 1px 1px 1px 0 rgba(255,255,255,.45),inset -1px -1px 1px 0 rgba(255,255,255,.25);box-shadow:0 8px 24px rgba(29,35,33,.07);cursor:zoom-in;
+ transition:bottom 380ms var(--ios)}
+#film.on{display:block;animation:film-in 520ms var(--spring) both;transform-origin:60% 120%}
+#film.on.swap{animation:none}
+#film .film-frame>video.film-held{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+#film.closing{animation:film-out 220ms var(--in) both}
+#film .film-frame{position:relative;aspect-ratio:16/9;border-radius:inherit;overflow:hidden}
+#film .film-frame>video,#film .film-frame>img{display:block;width:100%;height:100%;object-fit:cover;background:transparent;
+ -webkit-mask:linear-gradient(90deg,#0000,#000 9%,#000 91%,#0000),linear-gradient(#0000,#000 12%,#000 88%,#0000);-webkit-mask-composite:source-in;
+ mask:linear-gradient(90deg,#0000,#000 9%,#000 91%,#0000) intersect,linear-gradient(#0000,#000 12%,#000 88%,#0000)}
+#film .film-bar{display:none}
+#film.expanded{bottom:auto;cursor:auto;z-index:30;border-radius:30px;--lg-tint:rgba(252,251,247,.08);box-shadow:0 24px 60px rgba(29,35,33,.12),inset 1px 1px 1px 0 rgba(255,255,255,.5);transition:none}
+#film.expanded .film-bar{display:flex;align-items:center;gap:10px;margin:0 auto;padding:10px 14px 14px}
+#film .film-bar button{width:36px;height:36px;min-height:36px;padding:0;display:grid;place-items:center;flex:none}
+#film .film-progress{flex:1;height:4px;border-radius:999px;background:#1d232117;overflow:hidden}
+#film .film-progress i{display:block;height:100%;width:calc(var(--p,0) * 100%);background:var(--ink);border-radius:inherit}
+body.film-open #mapStage{filter:saturate(.9) brightness(.97);transition:filter 400ms var(--ios)}
+#film .film-bar button{color:var(--ink)}
+#film .fi{display:block;width:20px;height:20px}
+@keyframes film-in{from{scale:.4;translate:0 30px}to{scale:1;translate:0 0}}
+@keyframes film-out{to{scale:.4;translate:0 30px;opacity:0}}
+@keyframes film-cut{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+#film.chip{display:block;width:auto;border-radius:999px;cursor:auto;animation:tab-pop 420ms var(--spring-pop) both}
+#film .film-chip{min-height:40px;font-size:13px;padding:9px 16px}
+@keyframes tab-pop{from{scale:.6}to{scale:1}}
+body.ending #film{display:none}
+@media(max-width:700px){#film{left:auto;right:14px;bottom:auto;top:70px;width:min(46vw,200px);transition:none}#film.expanded{right:auto}}
+
+/* ---- End page ----------------------------------------------------------------------------------------------
+   The AI bubble glides to the centre, grows and pulses, looping circle → box → wobbly blob → circle. After one loop
+   it glides left and the outcome opens out of it, then its parts rise in and the meters fill. */
+#ending{display:none}
+body.ending #mapStage{filter:saturate(.75) blur(1.5px);transition:filter 900ms var(--ios)}
+body.ending :is(#actions,#character,#status,#caption){opacity:0;visibility:hidden;pointer-events:none;transition:opacity 260ms var(--in),visibility 0s 260ms}
+body.ending #guide,body.ending #guide.aside{left:50%;bottom:calc(50dvh - 70px);translate:-50% 0;transition:left 900ms var(--ios),bottom 900ms var(--ios),opacity 260ms var(--out)}
+body.ending #guide .guide-controls{display:none}
+body.ending #guide .agent{width:140px;height:140px;filter:drop-shadow(0 0 28px #ff7a1a40) drop-shadow(0 16px 36px #1d232140);
+ transition:width 900ms var(--ios),height 900ms var(--ios);animation:bubble-pulse 1.6s ease-in-out infinite alternate}
+/* The orb's sphere is drawn with transparent corners, so the bubble gets a dark glass body and an inner rim that
+   follow the morphing outline; the sphere's light plays inside it. */
+body.ending #guide .globe{overflow:hidden;background:radial-gradient(120% 120% at 50% 38%,#2b2833 0,#121118 58%,#08080c 100%);animation:bubble-morph 3.2s var(--ios) infinite}
+body.ending #guide .globe::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1.5px #ffffff38,inset 0 10px 18px -8px #ffffff40,inset 0 -14px 26px -10px #ff7a1a59}
+body.ending-reveal #guide,body.ending-reveal #guide.aside{left:calc(50% - 264px)}
+body.ending-reveal #guide .globe{animation-duration:5s}
+@keyframes bubble-morph{0%,100%{border-radius:50%;rotate:0deg}22%,32%{border-radius:24%;rotate:12deg}50%{border-radius:58% 42% 63% 37% / 41% 56% 44% 59%;rotate:4deg}68%{border-radius:42% 58% 37% 63% / 56% 41% 59% 44%;rotate:-6deg}84%{border-radius:50%;rotate:0deg}}
+@keyframes bubble-pulse{from{scale:1}to{scale:1.07}}
+body.ending #ending{display:block;visibility:hidden;position:fixed;left:calc(50% - 146px);top:50%;translate:0 -50%;width:480px;max-height:calc(100dvh - 120px);overflow:auto;overscroll-behavior:contain;
+ padding:28px 30px 24px;border-radius:28px;z-index:9;--lg-tint:rgba(255,255,255,.3)}
+body.ending-reveal #ending{visibility:visible;animation:end-pop 680ms var(--ios) both}
+@keyframes end-pop{from{clip-path:circle(0 at -64px 50%)}to{clip-path:circle(160% at -64px 50%)}}
+body.ending-reveal #ending>*{animation:rise 520ms var(--spring) both;animation-delay:calc(260ms + var(--i,0) * 70ms)}
+.end-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;margin-bottom:14px}
+.end-titles h1{font-size:34px;line-height:1.04;letter-spacing:-.02em;max-width:none;margin-top:6px}
+.end-score{position:relative;width:132px;height:132px;flex:none;display:grid;place-items:center;align-content:center}
+.end-score svg{position:absolute;inset:0;width:100%;height:100%;rotate:-90deg}
+.end-score circle{fill:none;stroke-width:5;stroke-linecap:round}
+.end-score .track{stroke:#1d232117}
+.end-score .fill{stroke:var(--hot);stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 1200ms var(--ios) 300ms}
+body.ending-reveal .end-score .fill{stroke-dashoffset:calc(100 - var(--s))}
+.end-score b{font:600 52px/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.end-score small{font-size:13px;font-weight:600;color:var(--muted);margin-top:2px}
+.end-line{font-size:14.5px;line-height:1.5;color:var(--ink-2);margin:0 0 6px}
+.end-strands{list-style:none;padding:0;margin:14px 0 12px;display:grid;gap:8px}
+.end-strands li{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 10px}
+.end-label{font-size:13px;font-weight:600}
+.end-tag{grid-column:1;justify-self:start;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c35a10;margin-top:-4px}
+.end-strands li.weak .end-tag{order:2}
+.end-meter{grid-column:1 / -1;height:4px;border-radius:999px;background:#1d232114;overflow:hidden}
+.end-meter i{display:block;height:100%;width:0;border-radius:inherit;background:var(--ink);transition:width 900ms var(--ios) calc(560ms + var(--i,0) * 90ms)}
+.end-strands li.weak .end-meter i{background:var(--hot)}
+body.ending-reveal .end-meter i{width:var(--v)}
+.end-val{grid-row:1;grid-column:2;font-size:12px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.end-facts{display:flex;gap:10px;margin:2px 0 14px}
+.end-fact{flex:1;display:flex;flex-direction:column;gap:2px;padding:8px 14px;border-radius:16px;background:#ffffff59}
+.end-fact small{font-size:11px;font-weight:600;color:var(--muted)}
+.end-fact b{font:600 22px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.end-actions{display:flex;flex-wrap:wrap;gap:8px}
+.end-actions button{flex:1 1 auto;min-height:40px;padding:9px 14px;font-size:13px}
+@media(max-width:1000px){body.ending-reveal #guide,body.ending-reveal #guide.aside{left:calc(50% - 230px)}body.ending #ending{left:calc(50% - 130px);width:min(440px,calc(50vw + 110px))}}
+@media(max-width:700px){
+ body.ending #guide,body.ending #guide.aside{left:50%;bottom:calc(50dvh - 60px);translate:-50% 0}
+ body.ending #guide .agent{width:120px;height:120px}
+ body.ending-reveal #guide,body.ending-reveal #guide.aside{left:50%;bottom:calc(100dvh - 150px)}
+ body.ending-reveal #guide .agent{width:80px;height:80px}
+ body.ending #ending{left:14px;right:14px;width:auto;top:166px;bottom:auto;translate:none;max-height:calc(100dvh - 180px);padding:20px 18px}
+ @keyframes end-pop{from{clip-path:circle(0 at 50% -40px)}to{clip-path:circle(160% at 50% -40px)}}
+ .end-head{gap:14px}.end-titles h1{font-size:28px}.end-score{width:84px;height:84px}.end-score b{font-size:28px}
+}
 
 /* Reduced motion and the in-app setting reach the same end states, instantly. */
 body.reduced *,body.reduced *:before,body.reduced *:after{animation:none!important;transition:none!important}
@@ -351,3 +449,251 @@ dialog{inset:74px 10px 10px;width:calc(100vw - 20px);max-height:calc(100dvh - 84
 #caption{font-size:calc(18px * var(--scale))}
 @media(max-width:380px){#guide .ribbon{width:48px}}
 @media(max-width:700px){:is(#actions,.ghost)>button,:is(#actions,.ghost) .group>button,.option-row .option{font-size:calc(13.5px * var(--scale))}#caption{font-size:calc(16px * var(--scale))}}
+
+/* ---- Hover explainers (hover.js): a liquid-glass card that grows out of the thing it explains and holds only a
+   small looping vector scene (organic forms, the props, pins and the rounded cross); no words on screen.
+   It never covers text already on screen. No background blur. ---- */
+#hx{position:fixed;z-index:40;width:280px;padding:8px;border-radius:22px;pointer-events:none}
+#hx[hidden]{display:none}
+#hx.in{animation:hx-in 440ms var(--spring-pop) both}
+#hx.out{animation:hx-out 180ms var(--in) both}
+@keyframes hx-in{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+@keyframes hx-out{to{opacity:0;transform:scale(.92)}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hx-stage{position:relative;width:264px;height:132px;border-radius:16px;overflow:hidden;background:radial-gradient(120% 120% at 30% 0%,rgba(255,255,255,.42),rgba(255,255,255,.08) 60%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
+.hx-stage>*{position:absolute}
+.hx-stage img{object-fit:contain}
+.hx-svg{left:0;top:0;width:264px;height:132px;overflow:visible}
+.hx-svg *{transform-box:fill-box;transform-origin:center}
+#hx.still *,#hx.still *::before{animation-play-state:paused!important;animation-delay:-3.9s!important}
+.hx-faint{fill:none;stroke:#1d232117;stroke-width:6;stroke-linecap:round}
+.hx-arc,.hx-gauge{fill:none;stroke:var(--ink);stroke-width:6;stroke-linecap:round}
+.hx-gauge{stroke-dasharray:100;stroke-dashoffset:100}
+.hx-notch{stroke:var(--ink-2);stroke-width:2;stroke-linecap:round}
+.hx-drop{fill:var(--hot);opacity:0}
+.hx-leaf,.hx-blob{fill:#fbf8f1;stroke:#1d232138;stroke-width:1.2}
+.hx-vein{fill:none;stroke:#1d232133;stroke-width:1.2;stroke-linecap:round}
+.hx-tick{opacity:0}.hx-tick circle{fill:var(--ink)}.hx-tick path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hx-orb{fill:none;stroke-width:5}.hx-orb.ac{stroke:var(--ink)}.hx-orb.fr{stroke:var(--hot)}
+.hx-ripple{fill:none;stroke:var(--hot);stroke-width:1.5;opacity:0}
+.hx-curve{fill:none;stroke:var(--ink);stroke-opacity:.45;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:4 5;opacity:0}
+.hx-dot,.hx-seed{left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--hot);border:2px solid #fffdf9;box-shadow:0 1px 4px #1d232144;offset-anchor:50% 50%;offset-rotate:0deg;opacity:0}
+.hx-seed{width:14px;height:14px;background:var(--ink);opacity:1}
+.hx-mag,.hx-fold,.hx-f1,.hx-f2,.hx-ng,.hx-law{left:0;top:0;offset-anchor:50% 50%;offset-rotate:0deg}
+.hx-law{width:40px;height:40px}
+.hx-pin{width:24px;height:36px}.hx-pin img{position:absolute;inset:0;width:24px;height:36px}
+.hx-flag{border-radius:50%}
+.hx-x{opacity:0;filter:drop-shadow(0 2px 4px #1d232133)}
+.hx-region{fill:#fbf6ea;stroke:#8b897c;stroke-width:1.4}
+.hx-wrap{fill:none;stroke:var(--hot);stroke-width:3;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100}
+.hx-crack{fill:none;stroke:var(--hot);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100}
+.hx-q{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round}.hx-qdot{fill:var(--ink)}
+.hx-ring{fill:none;stroke:var(--ink);stroke-width:6;stroke-linecap:round;stroke-dasharray:var(--c);transform:rotate(-90deg);animation:hx-ring 5s var(--move) infinite}
+@keyframes hx-ring{0%,8%{stroke-dashoffset:var(--c)}50%,92%{stroke-dashoffset:var(--to)}100%{stroke-dashoffset:var(--c)}}
+@keyframes h1a0{0%,10%{stroke-opacity:1}18%,92%{stroke-opacity:.1}99%,100%{stroke-opacity:1}}
+.h1a0{animation:h1a0 5s var(--move) infinite}
+@keyframes h1d0{0%,10%{opacity:0;transform:none}12%{opacity:1;transform:none}24%,100%{opacity:0;transform:translateY(22px) scale(.6)}}
+.h1d0{animation:h1d0 5s var(--in) infinite}
+@keyframes h1a1{0%,28%{stroke-opacity:1}36%,92%{stroke-opacity:.1}99%,100%{stroke-opacity:1}}
+.h1a1{animation:h1a1 5s var(--move) infinite}
+@keyframes h1d1{0%,28%{opacity:0;transform:none}30%{opacity:1;transform:none}42%,100%{opacity:0;transform:translateY(22px) scale(.6)}}
+.h1d1{animation:h1d1 5s var(--in) infinite}
+@keyframes h1a2{0%,46%{stroke-opacity:1}54%,92%{stroke-opacity:.1}99%,100%{stroke-opacity:1}}
+.h1a2{animation:h1a2 5s var(--move) infinite}
+@keyframes h1d2{0%,46%{opacity:0;transform:none}48%{opacity:1;transform:none}60%,100%{opacity:0;transform:translateY(22px) scale(.6)}}
+.h1d2{animation:h1d2 5s var(--in) infinite}
+@keyframes h1a3{0%,64%{stroke-opacity:1}72%,92%{stroke-opacity:.1}99%,100%{stroke-opacity:1}}
+.h1a3{animation:h1a3 5s var(--move) infinite}
+@keyframes h1d3{0%,64%{opacity:0;transform:none}66%{opacity:1;transform:none}78%,100%{opacity:0;transform:translateY(22px) scale(.6)}}
+.h1d3{animation:h1d3 5s var(--in) infinite}
+@keyframes h1g{0%,4%{transform:none}12%,90%{transform:rotate(180deg)}100%{transform:rotate(360deg)}}
+.hx-hg{animation:h1g 5s var(--move) infinite}
+@keyframes h2m{0%,6%{offset-distance:0%;opacity:0}10%{opacity:1}50%{offset-distance:100%;opacity:1}58%,100%{offset-distance:100%;opacity:0}}
+.hx-mag{animation:h2m 5s var(--move) infinite}
+@keyframes h2t{0%,50%{opacity:0;transform:scale(.4)}58%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.h2t{animation:h2t 5s var(--spring-pop) infinite}
+@keyframes h2a{0%,60%{stroke-opacity:1}68%,92%{stroke-opacity:.1}99%,100%{stroke-opacity:1}}
+.h2a1{animation:h2a 5s var(--move) infinite}
+@keyframes h2d{0%,60%{opacity:0;transform:none}62%{opacity:1}76%,100%{opacity:0;transform:translateY(22px) scale(.6)}}
+.h2d{animation:h2d 5s var(--in) infinite}
+@keyframes h3f{0%,6%{offset-distance:0%;opacity:0;transform:none}10%{opacity:1}26%{offset-distance:100%;opacity:1;transform:scale(.7)}30%,100%{offset-distance:100%;opacity:0;transform:scale(.5)}}
+.hx-fold{animation:h3f 5s var(--move) infinite}
+@keyframes h3a{0%,26%{transform:scale(.62)}38%,92%{transform:scale(1.12)}100%{transform:scale(.62)}}
+.hx-orb.ac{animation:h3a 5s var(--spring) infinite}
+@keyframes h3r{0%,28%{opacity:0;transform:scale(1)}30%{opacity:.9;transform:scale(1)}46%,100%{opacity:0;transform:scale(1.9)}}
+.h3r{animation:h3r 5s var(--out) infinite}
+@keyframes h3c{0%,40%{opacity:0}46%,90%{opacity:1}96%,100%{opacity:0}}
+.h3c{animation:h3c 5s var(--move) infinite}
+@keyframes h3d{0%,44%{offset-distance:0%;opacity:0}46%{opacity:1}66%{offset-distance:100%;opacity:1}72%,100%{offset-distance:100%;opacity:0}}
+.h3d{animation:h3d 5s var(--move) infinite}
+@keyframes h3b{0%,64%{transform:scale(.5)}78%,92%{transform:scale(1.1)}100%{transform:scale(.5)}}
+.hx-orb.fr{animation:h3b 5s var(--spring) infinite}
+@keyframes h4s{0%,18%{transform:rotate(-9deg)}36%{transform:rotate(-4deg)}54%,90%{transform:rotate(0)}100%{transform:rotate(-9deg)}}
+.hx-scale{animation:h4s 5s var(--spring) infinite}
+@keyframes h4f1{0%,16%{offset-distance:0%;opacity:0}18%{opacity:1}34%{offset-distance:100%;opacity:1}94%,100%{offset-distance:100%;opacity:0}}
+.hx-f1{animation:h4f1 5s var(--move) infinite}
+@keyframes h4f2{0%,34%{offset-distance:0%;opacity:0}36%{opacity:1}52%{offset-distance:100%;opacity:1}94%,100%{offset-distance:100%;opacity:0}}
+.hx-f2{animation:h4f2 5s var(--move) infinite}
+@keyframes h4r{0%,56%{opacity:0;transform:scale(1)}58%{opacity:.9;transform:scale(1)}74%,100%{opacity:0;transform:scale(1.9)}}
+.h4r{animation:h4r 5s var(--out) infinite}
+@keyframes h5c{0%,4%{opacity:0}10%,90%{opacity:1}96%,100%{opacity:0}}
+.h5 .hx-curve{animation:h5c 5s var(--move) infinite}
+@keyframes h5d1{0%,10%{offset-distance:0%;opacity:0}12%{opacity:1}44%{offset-distance:100%;opacity:1}50%,100%{offset-distance:100%;opacity:0}}
+.h5d1{animation:h5d1 5s var(--move) infinite}
+@keyframes h5d2{0%,10%{offset-distance:0%;opacity:0}12%{opacity:1}44%{offset-distance:100%;opacity:1}50%,100%{offset-distance:100%;opacity:0}}
+.h5d2{animation:h5d2 5s var(--move) infinite}
+@keyframes hxmid{0%,44%{transform:none}50%{transform:scale(1.1)}56%,100%{transform:none}}
+.hx-mid{animation:hxmid 5s var(--move) infinite}
+@keyframes h5r{0%,48%{opacity:0;transform:scale(1)}50%{opacity:.9;transform:scale(1)}66%,100%{opacity:0;transform:scale(1.9)}}
+.h5r{animation:h5r 5s var(--out) infinite}
+@keyframes h5s{0%,56%{opacity:0;transform:scale(.4) rotate(-12deg)}64%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.hx-sign{animation:h5s 5s var(--spring-pop) infinite}
+@keyframes h6c{0%,2%{opacity:0}8%,90%{opacity:1}96%,100%{opacity:0}}
+.h6 .hx-curve{animation:h6c 5s var(--move) infinite}
+@keyframes h6d0{0%,6%{offset-distance:0%;opacity:0}8%{opacity:1}40%{offset-distance:100%;opacity:1}46%,100%{offset-distance:100%;opacity:0}}
+.h6d0{animation:h6d0 5s var(--move) infinite}
+@keyframes h6d1{0%,10%{offset-distance:0%;opacity:0}12%{opacity:1}44%{offset-distance:100%;opacity:1}50%,100%{offset-distance:100%;opacity:0}}
+.h6d1{animation:h6d1 5s var(--move) infinite}
+@keyframes h6d2{0%,14%{offset-distance:0%;opacity:0}16%{opacity:1}48%{offset-distance:100%;opacity:1}54%,100%{offset-distance:100%;opacity:0}}
+.h6d2{animation:h6d2 5s var(--move) infinite}
+@keyframes h6d3{0%,18%{offset-distance:0%;opacity:0}20%{opacity:1}52%{offset-distance:100%;opacity:1}58%,100%{offset-distance:100%;opacity:0}}
+.h6d3{animation:h6d3 5s var(--move) infinite}
+@keyframes h6d4{0%,22%{offset-distance:0%;opacity:0}24%{opacity:1}56%{offset-distance:100%;opacity:1}62%,100%{offset-distance:100%;opacity:0}}
+.h6d4{animation:h6d4 5s var(--move) infinite}
+@keyframes h6r{0%,58%{opacity:0;transform:scale(1)}60%{opacity:.9;transform:scale(1)}76%,100%{opacity:0;transform:scale(1.9)}}
+.h6r{animation:h6r 5s var(--out) infinite}
+@keyframes h7l{0%,8%{offset-distance:0%;opacity:0;transform:none}12%{opacity:1}36%{offset-distance:100%;opacity:1;transform:scale(.8)}42%,100%{offset-distance:100%;opacity:0;transform:scale(.5)}}
+.hx-law{animation:h7l 5s var(--move) infinite}
+@keyframes h7t{0%,42%{opacity:0;transform:scale(.4)}50%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.h7t{animation:h7t 5s var(--spring-pop) infinite}
+@keyframes h7x{0%,58%{opacity:0;transform:scale(.4) rotate(-20deg)}66%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.h7x{animation:h7x 5s var(--spring-pop) infinite}
+@keyframes h7m{0%,58%{opacity:1}66%,90%{opacity:.45}100%{opacity:1}}
+.hx-coin{animation:h7m 5s var(--move) infinite}
+@keyframes h8g{0%,8%{stroke-dashoffset:100}34%,92%{stroke-dashoffset:36}100%{stroke-dashoffset:100}}
+.hx-gauge{animation:h8g 5s var(--move) infinite}
+@keyframes h8l{0%,36%{opacity:0;transform:translateY(-34px)}46%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.hx-lock{animation:h8l 5s var(--spring-pop) infinite}
+@keyframes h8r{0%,44%{stroke:#8b897c}48%,90%{stroke:#ff7a1a}96%,100%{stroke:#8b897c}}
+.hx-region{animation:h8r 5s var(--move) infinite}
+@keyframes h8p{0%,54%{opacity:0;transform:scale(.4) rotate(-14deg)}62%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.hx-stamp{animation:h8p 5s var(--spring-pop) infinite}
+@keyframes h9c{0%,2%{opacity:0}8%,90%{opacity:1}96%,100%{opacity:0}}
+.h9 .hx-curve{animation:h9c 5s var(--move) infinite}
+@keyframes h9m{0%,8%{offset-distance:0%}48%,92%{offset-distance:100%}100%{offset-distance:0%}}
+.h9s0{animation:h9m 5s var(--move) infinite}
+@keyframes h9a{0%,8%{offset-distance:0%;background:#1d2321;width:14px;height:14px}30%{background:#1d2321;width:14px;height:14px}48%,92%{offset-distance:100%;background:#ff7a1a;width:22px;height:22px}100%{offset-distance:0%;background:#1d2321;width:14px;height:14px}}
+.h9s1{animation:h9a 5s var(--move) infinite}
+@keyframes h9f{0%,50%{opacity:1}56%,92%{opacity:.25}100%{opacity:1}}
+.h9s2{animation:h9m 5s var(--move) infinite,h9f 5s var(--move) infinite}
+@keyframes h9x{0%,48%{opacity:0;transform:scale(.4)}56%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.h9x{animation:h9x 5s var(--spring-pop) infinite}
+@keyframes h9r{0%,48%{opacity:0;transform:scale(1)}50%{opacity:.9;transform:scale(1)}66%,100%{opacity:0;transform:scale(1.9)}}
+.h9r{animation:h9r 5s var(--out) infinite}
+@keyframes h9r2{0%,50%{opacity:0;transform:scale(1)}52%{opacity:.9;transform:scale(1)}68%,100%{opacity:0;transform:scale(1.9)}}
+.h9r2{animation:h9r2 5s var(--out) infinite}
+@keyframes h10n{0%,8%{offset-distance:0%;opacity:0}10%{opacity:1}30%{offset-distance:100%;opacity:1}94%,100%{offset-distance:100%;opacity:0}}
+.hx-ng{animation:h10n 5s var(--move) infinite}
+@keyframes h10w{0%,30%{stroke-dashoffset:100}52%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:100}}
+.hx-wrap{animation:h10w 5s var(--move) infinite}
+@keyframes h10t{0%,56%{opacity:0;transform:scale(.4)}64%,90%{opacity:1;transform:none}96%,100%{opacity:0}}
+.h10t{animation:h10t 5s var(--spring-pop) infinite}
+@keyframes h10b{0%,100%{transform:none}52%{transform:scale(1.05)}60%{transform:none}}
+.hx-book{animation:h10b 5s var(--move) infinite}
+@keyframes h11k{0%,14%{stroke-dashoffset:0}30%,92%{stroke-dashoffset:100}100%{stroke-dashoffset:0}}
+.hx-crack{animation:h11k 5s var(--move) infinite}
+@keyframes h11f{0%,34%{opacity:0;transform:translateY(20px)}48%,90%{opacity:1;transform:none}96%,100%{opacity:0;transform:translateY(20px)}}
+.h11f{animation:h11f 5s var(--spring) infinite}
+@keyframes h11c{0%,52%{opacity:0}56%,90%{opacity:1}96%,100%{opacity:0}}
+.h11c{animation:h11c 5s var(--move) infinite}
+@keyframes h11d{0%,54%{offset-distance:0%;opacity:0}56%{opacity:1}86%{offset-distance:100%;opacity:1}92%,100%{offset-distance:100%;opacity:0}}
+.h11d{animation:h11d 5s var(--move) infinite}
+/* End page, compact: numbers beside the verdict, three rows that open in place, Restart on its own. */
+.end-restart{align-self:start;width:48px;height:48px;min-height:48px;padding:0;border-radius:50%;display:grid;place-items:center}
+.end-restart .fi{width:22px;height:22px}
+.end-body{display:grid;grid-template-columns:1fr 220px;gap:16px;align-items:start;margin:0 0 14px}
+.end-lines .end-line:last-child{margin-bottom:0}
+.end-nums{margin:0;display:grid;gap:7px;padding:12px 14px;border-radius:16px;background:#ffffff59}
+.end-num{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.end-num dt{font-size:12px;font-weight:600;line-height:1.25;color:var(--ink-2)}
+.end-num dd{margin:0;white-space:nowrap}
+.end-num b{font:600 18px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--ink)}
+.end-num small{font-size:11px;font-weight:600;color:var(--muted);margin-left:1px}
+.end-num .end-tag{display:block;margin:2px 0 0}
+.end-num.weak b{color:var(--hot)}
+.end-num.sep{border-top:1px solid var(--hair);padding-top:9px;margin-top:2px}
+.end-more{display:grid}
+.end-x{border-top:1px solid var(--hair)}
+.end-x summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:12px 4px;font-size:14px;font-weight:600;cursor:pointer;border-radius:10px;transition:color var(--t-hover)}
+.end-x summary::-webkit-details-marker{display:none}
+.end-x summary:hover{color:var(--ink)}
+.end-x .chev{width:8px;height:8px;border:solid var(--muted);border-width:0 1.5px 1.5px 0;rotate:45deg;translate:0 -2px;transition:rotate 380ms var(--spring-pop),translate 380ms var(--spring-pop)}
+.end-x[open] .chev{rotate:225deg;translate:0 2px}
+.end-x .x-body{padding:0 4px 14px;font-size:13.5px;line-height:1.5;color:var(--ink-2);animation:x-open 360ms var(--ios) both}
+.end-x .x-body h3{font-size:12px;margin:10px 0 2px;color:var(--ink)}
+.end-x .x-body p{margin:0 0 6px}
+@keyframes x-open{from{opacity:0;translate:0 -6px}}
+@media(max-width:700px){.end-body{grid-template-columns:1fr}.end-score{width:100px;height:100px}.end-score b{font-size:40px}}
+
+/* ---- End page as a progressive reveal: the orb pulses, a spark travels to the drum, the outcome turns up on a
+   3D wheel of words (after Annnimate's rotating words) and lands on the verdict; tap the centre word to open it. ---- */
+body.ending #ending{padding:0;border-radius:0;overflow:visible;max-height:none;width:520px;left:calc(50% - 150px);background:none;box-shadow:none}
+body.ending-reveal #ending{animation:none}
+body.ending-reveal #ending>*{animation:none}
+.end-drum{position:relative;opacity:0;transition:opacity 500ms var(--out),filter 420ms var(--ios),scale 520ms var(--spring)}
+.end-drum.lit{opacity:1}
+.end-drum.behind{opacity:.18;filter:blur(6px);scale:.96;pointer-events:none}
+.rw-list{position:relative;margin:0;padding:0;list-style:none;-webkit-mask-image:linear-gradient(transparent,#000 24%,#000 76%,transparent);mask-image:linear-gradient(transparent,#000 24%,#000 76%,transparent)}
+.rw-item{position:absolute;top:50%;left:50%;backface-visibility:hidden;will-change:transform,opacity;white-space:nowrap}
+.rw-word{all:unset;cursor:pointer;display:flex;align-items:baseline;gap:12px;padding:4px 10px;border-radius:14px;font-family:var(--display);font-size:44px;line-height:1.1;letter-spacing:-.03em;font-weight:var(--wt,400);color:var(--ink)}
+.rw-word::before,.rw-word::after{display:none}
+.rw-word:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.rw-word .v{font-family:var(--body);font-size:16px;font-weight:700;letter-spacing:0;color:var(--muted);font-variant-numeric:tabular-nums}
+.rw-item.weak .rw-word .v{color:#c35a10}
+.rw-item.verdict .rw-word{font-size:52px}
+.rw-item.verdict .rw-word .v{font-family:var(--display);font-size:30px;font-weight:600;color:var(--hot)}
+/* the orb's colours run through the word as it lands */
+.rw-word .w{background:linear-gradient(100deg,var(--ink) 0 38%,#ff7a1a 46%,#ffd0a6 50%,#7aa7ff 54%,var(--ink) 62% 100%) 100% 0/320% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.rw-word .w.sweep{animation:word-sweep 1100ms var(--ios) both}
+@keyframes word-sweep{from{background-position:100% 0}to{background-position:0 0}}
+.rw-open{position:absolute;z-index:3;right:12px;top:50%;translate:0 -50%;width:40px;height:40px;min-height:40px;padding:0;border-radius:50%;display:grid;place-items:center;opacity:0;scale:.6;transition:opacity 360ms var(--out),scale 420ms var(--spring-pop)}
+.end-drum.landed .rw-open{opacity:1;scale:1}
+/* the picker's selection band: a strip of glass behind the centre row, like an iOS wheel picker */
+.rw-band{position:absolute;left:0;right:0;translate:0 -50%;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.16));box-shadow:inset 1.5px 1.5px 1px rgba(255,255,255,.6),inset -1px -1px 1px rgba(255,255,255,.35),0 6px 18px rgba(29,35,33,.08);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;scale:.96;transition:opacity 420ms var(--out),scale 520ms var(--spring)}
+.end-drum.landed .rw-band{opacity:1;scale:1}
+.end-foot{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:-18px;opacity:0;translate:0 8px;transition:opacity 420ms var(--out) 120ms,translate 520ms var(--spring) 120ms}
+.end-drum.landed .end-foot{opacity:1;translate:0 0}
+.rw-nav{display:flex;gap:4px}
+.rw-dot{all:unset;position:relative;display:block;width:14px;height:20px;cursor:pointer;opacity:.3}
+.rw-dot::before{content:'';position:absolute;top:50%;left:50%;width:calc(5px * var(--rw-dot,1));height:5px;margin-top:-2.5px;border-radius:999px;background:var(--ink);transform:translateX(-50%)}
+.rw-dot::after{display:none}
+.rw-dot:focus-visible{outline:1.5px solid var(--hot);outline-offset:2px;border-radius:6px}
+.end-restart{width:52px;height:52px;min-height:52px}
+/* the orb pulses as the outcome is about to appear; a spark of its light travels to the words */
+body.end-pulse #guide .agent{animation:orb-pulse 1100ms var(--out) 2}
+@keyframes orb-pulse{0%{filter:drop-shadow(0 0 28px #ff7a1a40) drop-shadow(0 16px 36px #1d232140)}40%{filter:drop-shadow(0 0 64px #ff7a1acc) drop-shadow(0 0 22px #7aa7ff99)}100%{filter:drop-shadow(0 0 28px #ff7a1a40) drop-shadow(0 16px 36px #1d232140)}}
+.end-spark{position:fixed;left:0;top:0;z-index:12;width:14px;height:14px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#fff 0,#ffd0a6 35%,#ff7a1a 70%,#ff7a1a00 72%);box-shadow:0 0 18px 6px #ff7a1a88,0 0 30px 10px #7aa7ff44;offset-anchor:50% 50%;offset-rotate:0deg;opacity:0}
+/* the glass detail card a word opens into */
+.end-detail{position:absolute;left:0;right:0;top:50%;translate:0 -50%;padding:24px 26px 20px;border-radius:28px;max-height:calc(100dvh - 120px);overflow:auto;overscroll-behavior:contain;z-index:2}
+.end-detail[hidden]{display:none}
+.end-detail .det-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;margin-bottom:14px}
+.end-detail h2{font-family:var(--display);font-size:32px;line-height:1.05;letter-spacing:-.02em;margin:6px 0 0}
+.end-detail .end-score{width:112px;height:112px}
+.end-detail .end-score b{font-size:42px}
+.end-detail .end-score .fill{stroke-dashoffset:calc(100 - var(--s));transition:none}
+.end-detail .end-score.hot .fill{stroke:var(--hot)}
+.end-detail .end-score:not(.hot) .fill{stroke:var(--ink)}
+.end-detail>.det-head .end-score .fill{animation:ring-in 900ms var(--ios) both}
+@keyframes ring-in{from{stroke-dashoffset:100}}
+.end-close{align-self:start;width:40px;height:40px;min-height:40px;padding:0;border-radius:50%;display:grid;place-items:center}
+.end-detail .end-lines{margin-bottom:12px}
+@media(max-width:700px){body.ending #ending{left:14px;right:14px;width:auto;top:170px;translate:none}.rw-word{font-size:32px}.rw-item.verdict .rw-word{font-size:38px}.rw-open{right:0}}
+
+/* The task above a set of choices: dark blue glass, the orb's blue, so the words read over any part of the map.
+   The task is bold, the situation medium, the options below stay regular. */
+.task-card{position:relative;margin:0 0 12px;padding:14px 18px 15px;border-radius:20px;color:#f3f6ff;
+ background:linear-gradient(160deg,rgba(44,74,138,.84),rgba(22,38,80,.8));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
+ box-shadow:inset 1.5px 1.5px 1px rgba(170,200,255,.45),inset -1px -1px 1px rgba(120,160,255,.22),0 10px 26px rgba(16,28,64,.22)}
+.task-card p{margin:0;text-wrap:pretty}
+.task-t{font-size:15px;line-height:1.35;font-weight:700;letter-spacing:-.005em}
+.task-c{margin-top:6px!important;font-size:14.5px;line-height:1.45;font-weight:500;color:#dbe4ff}

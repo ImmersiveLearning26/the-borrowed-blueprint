@@ -5,7 +5,8 @@ The learning content, scoring rules, saved-run format and map geography are unch
 ## Audio
 
 - **`AUDIO_GENERATION_FOR_LOVABLE.md`** (new, kit root): the complete brief for generating all 106 voice clips. Rebuild it from the manifest with `python tools/build_audio_guide.py .`.
-- No recordings are bundled yet. Until they exist, every line shows as text with "Next line".
+- **All 106 voice clips are now bundled** in `app/assets/audio/` (supplied 25 Nov 2026): MP3, mono, 44.1 kHz, about 128 kbps, about 9.9 minutes in total. Loudness −15.4 to −20.0 LUFS (median −16.9), no clipping, no clip cut off at the end. Five clips sit slightly below −19 LUFS (`FEATURE_A`, `DECISION_A_0`, `DECISION_B_2`, `S4_REJECT`, `CLOSE_ACCEPT`). Seven read fast for the brief (186–226 words a minute: `S1_EZE`, `S2_CLAIM`, `DECISION_C_1`, `S4_ART155`, `CLOSE_ACCEPT`, `S5_ENTER`, `CHALLENGE_limits`) and `CHECK_B` reads slowly (92). Many clips begin speaking at the very first millisecond. Nobody has listened through them for wording, pronunciation or voice consistency yet.
+- A missing clip still falls back to on-screen text with "Next line".
 
 ## Agent and characters
 
@@ -29,6 +30,19 @@ The learning content, scoring rules, saved-run format and map geography are unch
 - **Pins:** source markers are the supplied 3D location pin (`app/assets/pin.png`) with a ripple and high-contrast glass labels; labels flip sides to avoid each other, and place names under a pin fade out.
 - **Highlights:** the selected source's communities get a thin glow line; the 1978 Constitution, a national source, lights all of Spain's communities.
 - The camera keeps pins above the caption on the research step.
+
+## End page and later fixes (25 November 2026)
+
+- **End page:** when the brief is judged, the map dims and the AI bubble glides to the centre, pulses and loops circle → box → wobbly blob → circle. After one loop it glides left and the outcome opens out of it: verdict and score (counting up on a ring), Dr Eze's verdict line, whether you held your position, the four rubric strands as filling meters (weakest marked), credibility and fit risk, and Your choices / What changed / Your brief / Restart. Phones stack the bubble above the card.
+- **Reading an option aloud:** the option now stays in place, greyed and inactive, while its line is read, instead of disappearing.
+- **Performance:** in headless Chrome on an Apple M2 at 1366×768 (retina), the app holds 60fps idle, during camera moves, during the Spain–Nigeria journey and while audio plays, and the waveform follows the voice. The orb now rests when idle, and the selected pin's ripple runs four times instead of forever. The slow frame rates seen earlier came from the desktop app's browser pane being throttled, not from the app.
+- **Next:** `CLARITY_REVIEW_AND_EXPLAINER_PLAN.md` proposes explainer films, hover explainers and interface aids to make the simulation easier to follow; `EXPLAINER_IMAGE_ASSETS.md` lists the 23 photoreal props (with prompts) needed to build them.
+
+## Briefing films (25 November 2026)
+
+- **Four explainer films** (F1–F4) play in a glass window while the opening narration (N01–N04) is spoken: the Federation Account dispute reaching the Supreme Court, the 72-hour meeting, Spain's seventeen communities with different powers and fiscal deals, and the analyst's question (what can Nigeria borrow, and where does the comparison break).
+- Built with HyperFrames in `production/films/` from the supplied props and the app's own map; see `production/films/REVIEW.md`. App files: `app/assets/films/` (F1–F4 MP4, posters, `films.json`).
+- **Film window:** grows out of the guide's orb into the free top-left of the map (across the top on phones), stays locked to the voice, pauses with it, and swaps in place between lines. It plays by itself the first time a line is heard; on replays a "Watch the film" chip offers it. Reduced motion or data-saver shows the still poster.
 
 ## Developer page
 

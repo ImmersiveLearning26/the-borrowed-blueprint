@@ -57,7 +57,7 @@ export class Talk {
     const phase = now / 380;
     document.querySelectorAll('#guide .ribbon').forEach(r => drawRibbon(r, this.who === 'guide' ? this.level : 0, phase));
     document.querySelectorAll('#character .ribbon').forEach(r => drawRibbon(r, this.who === 'character' ? this.level : 0, phase));
-    if (this.orb) {
+    if (this.orb && !this.ending) {   // on the end page the orb performs on its own
       const guideTalking = this.who === 'guide' && target > 0;
       this.orb.set(guideTalking ? { level: this.level, speed: 0.7, energy: 0.18 } : { level: undefined, speed: 0, energy: 0.18 });
       this.orb.container.parentElement.style.setProperty('--talk', (this.who === 'guide' ? this.level : 0).toFixed(3));

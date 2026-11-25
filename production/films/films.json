@@ -1,0 +1,29 @@
+{
+ "films": [
+  {
+   "id": "F1",
+   "clip": "N01",
+   "start": 0.0,
+   "duration": 4.5
+  },
+  {
+   "id": "F2",
+   "clip": "N02",
+   "start": 4.5,
+   "duration": 6.8
+  },
+  {
+   "id": "F3",
+   "clip": "N03",
+   "start": 11.3,
+   "duration": 9.4
+  },
+  {
+   "id": "F4",
+   "clip": "N04",
+   "start": 20.7,
+   "duration": 6.6
+  }
+ ],
+ "total": 27.3
+}
