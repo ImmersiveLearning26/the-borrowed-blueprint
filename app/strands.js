@@ -542,8 +542,12 @@ export class Strands {
         st.clock += dt * p.speed * (0.6 + 1.6 * st.pace);
       }
       draw();
+      // Rest when nothing can change: reduced motion, or (Borrowed Blueprint) a still orb that is not speaking,
+      // with its intro finished. speed 0 freezes the strands, so redrawing would repaint the same image forever.
+      // set() and pointer events wake it again.
+      const still = !reduced && p.speed === 0 && !p.listening && typeof p.level !== 'number' && st.intro >= 1;
       const settled =
-        reduced &&
+        (reduced || still) &&
         Math.abs(st.activity - target) < 1e-3 &&
         Math.abs(st.pulse) < 1e-3 &&
         Math.abs(st.pulseV) < 1e-3 &&

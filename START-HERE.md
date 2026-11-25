@@ -18,6 +18,8 @@ No npm install or API keys are needed. All fonts, icons, maps and character imag
 
 **What changed since the first handoff:** see `CHANGES.md`.
 
+**Next design step:** `CLARITY_REVIEW_AND_EXPLAINER_PLAN.md` (explainers to make the run easier to follow) and `EXPLAINER_IMAGE_ASSETS.md` (the images it needs).
+
 ## Audio: give Lovable this file
 
 **`AUDIO_GENERATION_FOR_LOVABLE.md`** is the complete brief for generating all 106 voice clips: voices, pronunciation, format, file names, where the files go, and every line word for word. It is built from `app/assets/audio-manifest.json`; rebuild it with `python tools/build_audio_guide.py .` if the scripts change.

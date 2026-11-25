@@ -1,0 +1,26 @@
+{
+ "N01": {
+  "film": "assets/films/F1.webm",
+  "hevc": "assets/films/F1.mov",
+  "poster": "assets/films/F1-poster.webp",
+  "duration": 4.5
+ },
+ "N02": {
+  "film": "assets/films/F2.webm",
+  "hevc": "assets/films/F2.mov",
+  "poster": "assets/films/F2-poster.webp",
+  "duration": 6.8
+ },
+ "N03": {
+  "film": "assets/films/F3.webm",
+  "hevc": "assets/films/F3.mov",
+  "poster": "assets/films/F3-poster.webp",
+  "duration": 9.4
+ },
+ "N04": {
+  "film": "assets/films/F4.webm",
+  "hevc": "assets/films/F4.mov",
+  "poster": "assets/films/F4-poster.webp",
+  "duration": 6.6
+ }
+}
